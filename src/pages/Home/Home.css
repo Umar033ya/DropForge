@@ -1,3 +1,4 @@
+/* Desktop style */
 .swiper-container {
     width: 50%;
     max-width: 300px;
@@ -5,7 +6,7 @@
   }
   .swiper-slide img {
     width: 90%;
-    height: auto;
+    height: 80vh;
     border-radius: 10px; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     object-fit: cover;
@@ -18,3 +19,15 @@
     background-color: #F45E0C;
   }
   
+  /* Mobile style */
+  @media screen and (max-width: 768px) {
+    .swiper-container {
+      width: 90%; /* mobilda kengroq */
+      max-width: 100%;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 50vh; /* mobilda balandlikni kichraytirish */
+      border-radius: 8px;
+    }
+  }

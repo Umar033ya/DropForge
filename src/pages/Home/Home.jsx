@@ -9,7 +9,7 @@ function Home({coin}) {
   return (
     <div>
         <Header coin= {coin}/>
-        <div className='py-4'>
+        <div className='container'>
         <Swiper
       spaceBetween={50}
       modules={[ Pagination]}
@@ -38,7 +38,7 @@ function Home({coin}) {
             <img src="https://avatars.mds.yandex.net/i?id=2a0000019ac4a4345e085fcda0539d5cdc58-1325465-fast-images&n=13" alt="" />
         </div>
       </SwiperSlide>
-    </Swiper>
+        </Swiper>
         </div>
     </div>
   )
