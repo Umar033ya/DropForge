@@ -16,7 +16,7 @@ function Header({coin}) {
                 </div>
                 <div className="nav__end">
                     <div className="price_div">
-                        <p>$ {coin}</p>
+                        <p>G {coin}</p>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <div className="avatar">

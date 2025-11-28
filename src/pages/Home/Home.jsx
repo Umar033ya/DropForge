@@ -1,11 +1,12 @@
 import React from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header'
+import Skins from '../../components/skins/skins.jsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Navigation, Pagination} from 'swiper/modules';
 import "swiper/css/pagination"
-function Home({coin}) {
+function Home({coin, data}) {
   return (
     <div>
         <Header coin= {coin}/>
@@ -40,6 +41,7 @@ function Home({coin}) {
       </SwiperSlide>
         </Swiper>
         </div>
+        {/* <Skins data={data}/> */}
     </div>
   )
 }
