@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header'
 import Skins from '../../components/skins/skins.jsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { Navigation, Pagination} from 'swiper/modules';
+import { Pagination} from 'swiper/modules';
 import "swiper/css/pagination"
 function Home({coin, data}) {
   return (
@@ -41,7 +41,7 @@ function Home({coin, data}) {
       </SwiperSlide>
         </Swiper>
         </div>
-        {/* <Skins data={data}/> */}
+        <Skins data={data}/>
     </div>
   )
 }

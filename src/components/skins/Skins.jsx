@@ -1,4 +1,3 @@
-// Skins.jsx
 import React from "react";
 import "./Skins.css";
 
@@ -6,7 +5,7 @@ function Skins({ data }) {
   return (
     <div className="skins-container">
       {data?.map((item) => {
-        const { id, name, type, price, rarity, statTrack } = item;
+        const { id, name, type, price, rarity, statTrack , img} = item;
 
         return (
           <div className="skin-card" key={id}>
@@ -19,7 +18,7 @@ function Skins({ data }) {
 
               <div className="skin-img-placeholder">
                 <img 
-                  src="https://avatars.mds.yandex.net/i?id=c97b4a991220e3b61859305005489fe1451e709c-4080017-images-thumbs&n=13" 
+                  src={img} 
                   alt={name} 
                 />
               </div>
