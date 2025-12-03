@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header/Header.jsx'
+import LayOut from './components/Layout/Layout.jsx'
 import Home from './pages/Home/Home.jsx'
+import CaseOpen from './pages/CaseOpen/CaseOpen.jsx'
 function App() {
    const [coin, setCoin] = useState(0)
    const [data, setData] = useState([])
@@ -21,7 +22,8 @@ function App() {
    }, [])
   return (
     <Routes>
-      <Route path='/' element={ <Home coin={coin} data={data}/>}></Route>
+      <Route path='/' element={<LayOut coin={coin}> <Home  data={data}/></LayOut>}></Route>
+      <Route path='/caseopen' element={<LayOut coin={coin}><CaseOpen></CaseOpen></LayOut>}></Route>
     </Routes>
   )
 }

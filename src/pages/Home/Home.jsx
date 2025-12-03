@@ -1,15 +1,16 @@
 import React from 'react'
 import './Home.css'
-import Header from '../../components/Header/Header'
-import Skins from '../../components/skins/skins.jsx'
+import logo from '../../../public/DF.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Pagination} from 'swiper/modules';
+import Cases from '../../components/Case/Case.jsx'
 import "swiper/css/pagination"
-function Home({coin, data}) {
+
+function Home({data}) {
   return (
     <div>
-        <Header coin= {coin}/>
+     
         <div className='container'>
         <Swiper
       spaceBetween={50}
@@ -41,7 +42,15 @@ function Home({coin, data}) {
       </SwiperSlide>
         </Swiper>
         </div>
-        <Skins data={data}/>
+        <div className="cases-wrapper">
+  <h1 className="cases-title">Cases</h1>
+  <div className="cases-container">
+    <Cases caseImg={logo} caseName="Drop Forge" skinIds={[1,56,32,4,9,3,45,22,60,10]} />
+    <Cases caseImg={logo} caseName="Epic Vault" skinIds={[2,5,8,12,15]} />
+    <Cases caseImg={logo} caseName="Legendary Box" skinIds={[7,9,14,20]} />
+  </div>
+</div>
+
     </div>
   )
 }
