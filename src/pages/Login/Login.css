@@ -1,0 +1,196 @@
+/* =========================== */
+/*      GLOBAL LOGIN PAGE      */
+/* =========================== */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0f;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  /* =========================== */
+  /*      LOGIN CARD             */
+  /* =========================== */
+  .login-card {
+    background: #131317;
+    border-radius: 18px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  
+  /* =========================== */
+  /*      AVATAR AREA            */
+  /* =========================== */
+  .avatar-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #9c6bff;
+    filter: drop-shadow(0px 0px 30px rgba(120,0,255,0.45));
+  }
+  
+  /* =========================== */
+  /*      FORM FIELDS            */
+  /* =========================== */
+  .login-form .brand {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .label-text {
+    margin-bottom: 6px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #1b1b1f;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s ease;
+  }
+  
+  input:focus {
+    border-color: #9c6bff;
+    box-shadow: 0 0 12px rgba(156,107,255,0.45);
+  }
+  
+  /* =========================== */
+  /*      BUTTON STYLE           */
+  /* =========================== */
+  .btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #6d4aff, #9c6bff);
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 10px 28px rgba(120,0,255,0.35);
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 38px rgba(160,100,255,0.55);
+  }
+  
+  /* =========================== */
+  /*      AUXILIARY LINKS        */
+  /* =========================== */
+  .aux-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .link {
+    color: #9c6bff;
+    text-decoration: none;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+  .link1{
+    color: #9c6bff;
+    text-decoration: none;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .sep {
+    margin: 0 6px;
+    color: #666;
+  }
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 30px 20px;
+    }
+  }
+  
+
+  /* =========================== */
+/*         INPUT FIELD         */
+/* =========================== */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #f0f0f0;
+  opacity: 0.85;
+}
+
+/* Common input style */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #1b1b1f;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s ease, box-shadow 0.25s ease;
+}
+input:focus {
+  border-color: #9c6bff;
+  box-shadow: 0 0 15px rgba(156,107,255,0.6);
+}
+input::placeholder {
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+input:hover {
+  border-color: #6d4aff;
+  box-shadow: 0 0 10px rgba(108,74,255,0.4);
+}
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}

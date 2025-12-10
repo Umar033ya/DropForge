@@ -1,0 +1,233 @@
+/* =========================== */
+/*    GLOBAL DARK LAYOUT       */
+/* =========================== */
+
+.caseopen-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background: #0d0d0f;
+    position: relative;
+  }
+  
+  
+  /* =========================== */
+  /*   CASE HEADER SECTION       */
+  /* =========================== */
+  
+  .case-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #131317;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 30px;
+  }
+  
+  .case-header img {
+    width: 260px;
+    height: auto;
+    filter: drop-shadow(0px 0px 45px rgba(120,0,255,0.45));
+  }
+  
+  .case-header h1 {
+    margin-top: 18px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  /* =========================== */
+  /*          OPEN BTN           */
+  /* =========================== */
+  
+  .open-btn {
+    margin-top: 22px;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, #6d4aff, #9c6bff);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.25s ease;
+    box-shadow: 0 10px 28px rgba(120,0,255,0.35);
+  }
+  
+  .open-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 14px 38px rgba(160,100,255,0.55);
+  }
+  
+  
+  /* =========================== */
+  /*       SKINS GRID            */
+  /* =========================== */
+  
+  .skins-title {
+    font-size: 22px;
+    margin: 10px 0 20px;
+    color: #f0f0f0;
+  }
+  
+  .skins-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+  }
+  
+  
+  /* =========================== */
+  /*       SKIN CARD             */
+  /* =========================== */
+  
+  .skin-card {
+    background: #1b1b1f;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 10px;
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skin-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  }
+  
+  .skin-top-highlight {
+    width: 100%;
+    height: 6px;
+    background: #9b59ff;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 6px;
+    opacity: 0.8;
+  }
+  
+  
+  /* =========================== */
+  /*      IMAGE BOX AREA         */
+  /* =========================== */
+  
+  .skin-image-box {
+    height: 140px;
+    background: #24242a;
+    border-radius: 12px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skin-image-box img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 30px rgba(130,0,255,0.4));
+  }
+  
+  
+  /* =========================== */
+  /*         BADGES              */
+  /* =========================== */
+  
+  .st-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #ff901f;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .st-badge.nost {
+    background: #666;
+    color: #fff;
+  }
+  
+  .price-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #00b7ff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  
+  /* =========================== */
+  /*        BOTTOM INFO          */
+  /* =========================== */
+  
+  .skin-info {
+    text-align: center;
+  }
+  
+  .skin-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 0;
+    color: #f3f3f3;
+  }
+  
+  .skin-info p {
+    font-size: 12px;
+    opacity: 0.7;
+    color: #bdbdbd;
+  }
+  
+  
+  /* =========================== */
+  /*       RESPONSIVE UI         */
+  /* =========================== */
+  
+  @media (max-width: 768px) {
+    .skins-container {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .case-header img {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skins-container {
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+  
+    .case-header h1 {
+      font-size: 22px;
+    }
+  }
+  /* EXIT ICON STYLE */
+.exit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 34px;
+    cursor: pointer;
+    color: #ff4d4d;
+    transition: 0.2s ease;
+  }
+  
+  .exit-icon:hover {
+    transform: scale(1.15);
+    color: #ff1a1a;
+  }
+  
