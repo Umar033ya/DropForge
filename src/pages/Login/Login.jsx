@@ -56,7 +56,7 @@ function Login() {
       alert("Login successfully")
       navigate("/")
     } else {
-      alert("User not found");
+      alert("User not found or Login and password Mistake");
     }
   };
   
