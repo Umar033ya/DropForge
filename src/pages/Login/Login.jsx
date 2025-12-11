@@ -13,40 +13,38 @@ function Login() {
 
   const navigate = useNavigate();
 
-  // Register form submit
   const registerForm = async (e) => {
-    e.preventDefault(); // sahifa refresh bo‘lishini to‘xtatadi
+    e.preventDefault(); 
     const registerData = {
-      users: [
-        {
           name: name,
           email: email,
           password: password,
           so2id: id,
           coin: 10
-        }
-      ]
     };
 
     try {
       const res = await axios.post(
-        "https://www.npoint.io/docs/6404427173fedb3ae6b3",
+        "https://68c65fd9442c663bd026db89.mockapi.io/users",
         registerData,
         { headers: { "Content-Type": "application/json" } }
       );
       console.log("User registered:", res.data);
       alert("Registration successful!");
+      setEmail("")
+      setId("")
+      setName("")
+      setPassword("")
       setRegister(false);
     } catch (error) {
       console.log(error);
       alert("Error during registration!");
     }
   };
-
-  const loginForm = (e) => {
-    e.preventDefault();
-    alert("Login functionality not implemented yet!");
-  };
+  const Login = async (e) =>{
+    e.preventDefault()
+    
+  }
 
   return (
     <main className="login-page">
@@ -118,7 +116,7 @@ function Login() {
             <img className="avatar" src={df} alt="Your avatar" />
           </div>
 
-          <form className="login-form" onSubmit={loginForm}>
+          <form  className="login-form" onSubmit={Login}>
             <h1 className="brand">Drop Forge</h1>
 
             <label className="field">
