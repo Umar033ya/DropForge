@@ -3,6 +3,7 @@ import './Login.css';
 import df from '../../../public/DF.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { jsxs } from 'react/jsx-runtime';
 
 function Login() {
   const [register, setRegister] = useState(false);
@@ -41,10 +42,24 @@ function Login() {
       alert("Error during registration!");
     }
   };
-  const Login = async (e) =>{
-    e.preventDefault()
-    
-  }
+  const Login = async (e) => {
+    e.preventDefault();
+  
+    let res = await axios.get("https://68c65fd9442c663bd026db89.mockapi.io/users");
+  
+    const userCheck = res.data.filter((user) => user.name === name && user.password === password);
+  
+    if (userCheck.length > 0) {
+      localStorage.setItem("token", Math.round(Math.random() * 100000000000000000000));
+      const coin = userCheck[0].coin
+      localStorage.setItem("coin", JSON.stringify(coin))
+      alert("Login successfully")
+      navigate("/")
+    } else {
+      alert("User not found");
+    }
+  };
+  
 
   return (
     <main className="login-page">
@@ -125,6 +140,7 @@ function Login() {
                 type="text"
                 placeholder="Enter your name or email"
                 required
+                onChange={(e) => setName(e.target.value)}
               />
             </label>
 
@@ -134,6 +150,7 @@ function Login() {
                 type="password"
                 placeholder="••••••••"
                 required
+                onChange={(e) => setPassword(e.target.value)}
               />
             </label>
 

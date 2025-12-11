@@ -1,8 +1,12 @@
 import React from 'react'
 import './Header.css'
 import logo from '../../../public/DF.png'
+import { FaRegUserCircle } from "react-icons/fa";
+import axios from 'axios';
+function Header() {
 
-function Header({coin}) {
+     let coin = JSON.parse(localStorage.getItem("coin"))
+   
   return (
     <header>
         <div className="container">
@@ -19,8 +23,8 @@ function Header({coin}) {
                         <p>G {coin}</p>
                         <i class="fa-solid fa-plus"></i>
                     </div>
-                    <div className="avatar">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <div className="user">
+                     <FaRegUserCircle/>
                     </div>
                 </div>
             </nav>

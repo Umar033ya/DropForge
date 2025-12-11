@@ -7,7 +7,6 @@ import CaseOpen from './pages/CaseOpen/CaseOpen.jsx'
 import ProtectRout from './components/Protect Rout/ProtectRout.jsx'
 import Login from './pages/Login/Login.jsx'
 function App() {
-   const [coin, setCoin] = useState(0)
    const [data, setData] = useState([])
 
    const fetchData = async()=>{
@@ -24,8 +23,8 @@ function App() {
    }, [])
   return (
     <Routes>
-      <Route path='/' element={<ProtectRout><LayOut coin={coin}> <Home  data={data}/></LayOut></ProtectRout>}></Route>
-      <Route path='/caseopen' element={<ProtectRout><LayOut coin={coin}><CaseOpen></CaseOpen></LayOut></ProtectRout>}></Route>
+      <Route path='/' element={<ProtectRout><LayOut > <Home  data={data}/></LayOut></ProtectRout>}></Route>
+      <Route path='/caseopen' element={<ProtectRout><LayOut ><CaseOpen></CaseOpen></LayOut></ProtectRout>}></Route>
       <Route path='/login' element={<Login/>}></Route>
     </Routes>
   )

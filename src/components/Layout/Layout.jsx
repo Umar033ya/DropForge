@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../Header/Header.jsx'
-function Layout({children, coin}) {
+function Layout({children}) {
   return (
     <div>
-     <Header coin= {coin}/>
+     <Header/>
      {children}
     </div>
   )
