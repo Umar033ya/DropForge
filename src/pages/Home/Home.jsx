@@ -9,6 +9,10 @@ import "swiper/css/pagination";
 import case1 from '../../../public/case1.png';
 import case2 from '../../../public/case2.jpg'
 import case3 from '../../../public/case3.jpg'
+import swiper1 from '../../../public/SWIPER1.jpg'
+import swiper2 from '../../../public/swiper2.jpg'
+import swiper3 from '../../../public/swiper3.jpg'
+import swiper4 from '../../../public/swiper4.png'
 function Home({ data }) {
   return (
     <div>
@@ -24,7 +28,7 @@ function Home({ data }) {
           <SwiperSlide>
             <div className="flex justify-center">
               <img
-                src="https://avatars.mds.yandex.net/i?id=2a0000019ac4a4345e085fcda0539d5cdc58-1325465-fast-images&n=13"
+                src={swiper1}
                 alt=""
               />
             </div>
@@ -32,7 +36,7 @@ function Home({ data }) {
           <SwiperSlide>
             <div className="flex justify-center">
               <img
-                src="https://avatars.mds.yandex.net/i?id=2a0000019ac4a4345e085fcda0539d5cdc58-1325465-fast-images&n=13"
+                src={swiper2}
                 alt=""
               />
             </div>
@@ -40,7 +44,7 @@ function Home({ data }) {
           <SwiperSlide>
             <div className="flex justify-center">
               <img
-                src="https://avatars.mds.yandex.net/i?id=2a0000019ac4a4345e085fcda0539d5cdc58-1325465-fast-images&n=13"
+                src={swiper3}
                 alt=""
               />
             </div>
@@ -48,7 +52,7 @@ function Home({ data }) {
           <SwiperSlide>
             <div className="flex justify-center">
               <img
-                src="https://avatars.mds.yandex.net/i?id=2a0000019ac4a4345e085fcda0539d5cdc58-1325465-fast-images&n=13"
+                src={swiper4}
                 alt=""
               />
             </div>
@@ -87,12 +91,12 @@ function Home({ data }) {
   price={25}
 />
 
-<Cases caseImg={logo} caseName="Emerald Strike"
+<Cases caseImg={case2} caseName="Emerald Strike"
   skinIds={[7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 71, 75, 79, 83]}
   price={40}
 />
 
-<Cases caseImg={logo} caseName="Golden Phantom"
+<Cases caseImg={case3} caseName="Golden Phantom"
   skinIds={[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39]}
   price={55}
 />
@@ -102,17 +106,17 @@ function Home({ data }) {
   price={30}
 />
 
-<Cases caseImg={logo} caseName="Frostbite"
+<Cases caseImg={case3} caseName="Frostbite"
   skinIds={[41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79]}
   price={22}
 />
 
-<Cases caseImg={logo} caseName="Inferno Blaze"
+<Cases caseImg={case2} caseName="Inferno Blaze"
   skinIds={[3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60]}
   price={50}
 />
 
-<Cases caseImg={logo} caseName="Violet Vortex"
+<Cases caseImg={case1} caseName="Violet Vortex"
   skinIds={[4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80]}
   price={28}
 />
@@ -122,12 +126,12 @@ function Home({ data }) {
   price={65}
 />
 
-<Cases caseImg={logo} caseName="Azure Phantom"
+<Cases caseImg={case2} caseName="Azure Phantom"
   skinIds={[7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 4, 11, 18, 25, 32, 39, 46, 53, 60]}
   price={18}
 />
 
-<Cases caseImg={logo} caseName="Crimson Reign"
+<Cases caseImg={case1} caseName="Crimson Reign"
   skinIds={[8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 9, 18, 27, 36, 45, 54, 63, 72, 3, 12]}
   price={34}
 />
