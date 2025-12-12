@@ -135,7 +135,7 @@ function Login() {
             <h1 className="brand">Drop Forge</h1>
 
             <label className="field">
-              <span className="label-text">Username or Email</span>
+              <span className="label-text">Username</span>
               <input
                 type="text"
                 placeholder="Enter your name or email"
