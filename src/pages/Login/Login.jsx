@@ -3,7 +3,7 @@ import './Login.css';
 import df from '../../../public/DF.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { jsxs } from 'react/jsx-runtime';
+import { toast } from 'react-toastify';
 
 function Login() {
   const [register, setRegister] = useState(false);
@@ -23,7 +23,6 @@ function Login() {
           so2id: id,
           coin: 10
     };
-
     try {
       const res = await axios.post(
         "https://68c65fd9442c663bd026db89.mockapi.io/users",
@@ -31,7 +30,7 @@ function Login() {
         { headers: { "Content-Type": "application/json" } }
       );
       console.log("User registered:", res.data);
-      alert("Registration successful!");
+      toast.success("Registration successful!")
       setEmail("")
       setId("")
       setName("")
@@ -39,7 +38,7 @@ function Login() {
       setRegister(false);
     } catch (error) {
       console.log(error);
-      alert("Error during registration!");
+      toast.error("Error during registration!")
     }
   };
   const Login = async (e) => {
@@ -53,10 +52,10 @@ function Login() {
       localStorage.setItem("token", Math.round(Math.random() * 100000000000000000000));
       const coin = userCheck[0].coin
       localStorage.setItem("coin", JSON.stringify(coin))
-      alert("Login successfully")
+      toast.success("Login successfully");
       navigate("/")
     } else {
-      alert("User not found or Login and password Mistake");
+      toast.error("User not found or Login and password Mistake")
     }
   };
   

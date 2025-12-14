@@ -6,6 +6,10 @@ import Home from './pages/Home/Home.jsx'
 import CaseOpen from './pages/CaseOpen/CaseOpen.jsx'
 import ProtectRout from './components/Protect Rout/ProtectRout.jsx'
 import Login from './pages/Login/Login.jsx'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 function App() {
    const [data, setData] = useState([])
 
@@ -22,11 +26,15 @@ function App() {
     fetchData()
    }, [])
   return (
-    <Routes>
+   <>
+     <Routes>
       <Route path='/' element={<ProtectRout><LayOut > <Home  data={data}/></LayOut></ProtectRout>}></Route>
       <Route path='/caseopen' element={<ProtectRout><LayOut ><CaseOpen></CaseOpen></LayOut></ProtectRout>}></Route>
       <Route path='/login' element={<Login/>}></Route>
     </Routes>
+    <ToastContainer position="top-right" autoClose={3000} />
+   </>
+    
   )
 }
 
