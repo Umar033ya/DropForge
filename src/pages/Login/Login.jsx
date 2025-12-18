@@ -15,49 +15,62 @@ function Login() {
   const navigate = useNavigate();
 
   const registerForm = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+  
     const registerData = {
-          name: name,
-          email: email,
-          password: password,
-          so2id: id,
-          coin: 10
+      name,
+      email,
+      password,
+      so2id: id,
+      coin: 10
     };
+  
     try {
       const res = await axios.post(
         "https://68c65fd9442c663bd026db89.mockapi.io/users",
-        registerData,
-        { headers: { "Content-Type": "application/json" } }
+        registerData
       );
-      console.log("User registered:", res.data);
-      toast.success("Registration successful!")
-      setEmail("")
-      setId("")
-      setName("")
-      setPassword("")
-      setRegister(false);
+  
+      localStorage.setItem("userId", res.data.id);
+      localStorage.setItem("coin", JSON.stringify(res.data.coin));
+      localStorage.setItem("username", res.data.name);
+  
+      toast.success("Registration successful!");
+      navigate("/");
     } catch (error) {
-      console.log(error);
-      toast.error("Error during registration!")
+      toast.error("Error during registration!");
     }
   };
+  
   const Login = async (e) => {
     e.preventDefault();
   
-    let res = await axios.get("https://68c65fd9442c663bd026db89.mockapi.io/users");
+    try {
+      const res = await axios.get(
+        "https://68c65fd9442c663bd026db89.mockapi.io/users"
+      );
   
-    const userCheck = res.data.filter((user) => user.name === name && user.password === password);
+      const user = res.data.find(
+        (u) => u.name === name && u.password === password
+      );
   
-    if (userCheck.length > 0) {
-      localStorage.setItem("token", Math.round(Math.random() * 100000000000000000000));
-      const coin = userCheck[0].coin
-      localStorage.setItem("coin", JSON.stringify(coin))
+      if (!user) {
+        toast.error("User not found or password incorrect");
+        return;
+      }
+
+      localStorage.setItem("token", Date.now());
+      localStorage.setItem("userId", user.id);
+      localStorage.setItem("coin", JSON.stringify(user.coin));
+      localStorage.setItem("username", user.name);
+  
       toast.success("Login successfully");
-      navigate("/")
-    } else {
-      toast.error("User not found or Login and password Mistake")
+      navigate("/");
+    } catch (err) {
+      toast.error("Login error");
     }
   };
+  
   return (
     <main className="login-page">
       {register ? (
