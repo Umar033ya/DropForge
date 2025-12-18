@@ -1,15 +1,29 @@
-import React from "react";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, useLocation, useNavigate , } from "react-router-dom";
+import axios from "axios";
+import { toast } from 'react-toastify';
+import { useState } from "react";
 import { IoMdExit } from "react-icons/io";
 import "./CaseOpen.css";
 
 function CaseOpen() {
   const location = useLocation();
   const state = location.state;
-
+  let coin = JSON.parse(localStorage.getItem("coin"))
+  const [coins, setCoins] = useState(coin)
   const { caseName, caseImg, skins, price } = state;
   const navigate = useNavigate();
+  const openCase = () =>{
+         if(coins >= price){
+          setCoins(coins - price)
+         }else{
+          toast.error("You have not enouht coins")
+         }
+  }
 
+  useEffect(() =>{
+      
+  }, [coins])
   return (
     <div className="caseopen-wrapper">
       <IoMdExit onClick={() => navigate("/")} className="exit-icon" />
@@ -17,7 +31,7 @@ function CaseOpen() {
       <div className="case-header">
         <h1>{caseName}</h1>
         <img src={caseImg} alt={caseName} />
-        <button className="open-btn">Open {price}G</button>
+        <button onClick={openCase} className="open-btn">Open {price}G</button>
       </div>
 
       <div className="skins-container">

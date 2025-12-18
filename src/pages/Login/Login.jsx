@@ -58,8 +58,6 @@ function Login() {
       toast.error("User not found or Login and password Mistake")
     }
   };
-  
-
   return (
     <main className="login-page">
       {register ? (
