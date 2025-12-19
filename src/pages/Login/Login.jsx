@@ -63,6 +63,7 @@ function Login() {
       localStorage.setItem("userId", user.id);
       localStorage.setItem("coin", JSON.stringify(user.coin));
       localStorage.setItem("username", user.name);
+      localStorage.setItem("so2id", user.so2id)
   
       toast.success("Login successfully");
       navigate("/");
