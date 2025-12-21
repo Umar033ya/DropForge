@@ -35,7 +35,7 @@ function Profile() {
             <CiMoneyCheck1 /> Make a deposit
           </button>
 
-          <button className="withdraw">
+          <button onClick={() => navigate("/withraw")} className="withdraw">
             <BiMoneyWithdraw /> Withdraw your game balance
           </button>
         </div>

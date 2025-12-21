@@ -1,0 +1,130 @@
+.withdraw-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0d0b1f, #3b0d5c);
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  .withdraw-card {
+    background: #1b0f2e;
+    border-radius: 22px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .withdraw-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(75,0,150,0.55);
+  }
+  .brand {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #d8bfff;
+    text-shadow: 0 0 6px rgba(156,107,255,0.5);
+  }
+  .info-text {
+    font-size: 14px;
+    color: #e0d8ff;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  
+  .label-text {
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #c8bfff;
+  }
+  
+  input[type="number"] {
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #2a1743;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #9c6bff;
+    box-shadow: 0 0 12px rgba(156,107,255,0.5);
+  }
+  
+  input::placeholder {
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+  }
+  
+  input:hover {
+    border-color: #b38fff;
+    box-shadow: 0 0 10px rgba(156,107,255,0.35);
+  }
+  .btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #6d4aff, #b38fff);
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(156,107,255,0.4);
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(156,107,255,0.55);
+  }
+  .skin-img {
+    width: 65%;
+    display: block;
+    margin: 12px auto;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .skin-img:hover {
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 12px 35px rgba(156,107,255,0.45);
+  }
+  .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #d8bfff;
+    text-align: center;
+    margin-bottom: 12px;
+    text-shadow: 0 0 6px rgba(156,107,255,0.3);
+  }
+  @media (max-width: 480px) {
+    .withdraw-card {
+      padding: 25px 15px;
+    }
+  
+    .skin-img {
+      width: 85%;
+    }
+  
+    input[type="number"] {
+      font-size: 13px;
+      padding: 10px 12px;
+    }
+  }
+  

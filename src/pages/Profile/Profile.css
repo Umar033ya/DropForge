@@ -44,8 +44,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
-  /* ICON ACTIONS */
   .profile-actions {
     display: flex;
     gap: 14px;
@@ -109,8 +107,6 @@
     color: white;
     transition: 0.35s;
   }
-  
-  /* Deposit */
   .profile-buttons .deposit {
     background: linear-gradient(135deg, #9c6bff, #6f42ff);
   }
