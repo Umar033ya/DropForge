@@ -174,6 +174,11 @@ function Login() {
                 Register
               </p>
             </div>
+            <div className='aux-links'>
+            <p className="link" onClick={() => navigate("/adminlogin")}>
+                For admins
+              </p>
+            </div>
           </form>
         </section>
       )}

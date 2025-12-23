@@ -1,0 +1,159 @@
+:root {
+    --purple: #9c6bff;
+    --purple-dark: #6a35ff;
+    --bg-dark: #07030f;
+    --glass: rgba(25, 12, 55, 0.88);
+    --text-soft: #cdbdff;
+  }
+  .adminPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(156,107,255,0.18), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(106,53,255,0.18), transparent 40%),
+      linear-gradient(180deg, #0b051a, var(--bg-dark));
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+  .adminPage::before,
+  .adminPage::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--purple);
+    filter: blur(120px);
+    opacity: 0.15;
+    animation: floatGlow 10s infinite alternate ease-in-out;
+  }
+  
+  .adminPage::after {
+    background: var(--purple-dark);
+    animation-delay: 5s;
+  }
+  
+  @keyframes floatGlow {
+    from { transform: translateY(-40px); }
+    to   { transform: translateY(40px); }
+  }
+  .logo {
+    width: 95px;
+    margin-bottom: 14px;
+    animation: logoPop 0.7s ease;
+    filter: drop-shadow(0 0 25px rgba(156,107,255,0.9));
+  }
+  
+  @keyframes logoPop {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+  .adminPage h1 {
+    margin-bottom: 22px;
+    font-size: 30px;
+    letter-spacing: 1.2px;
+    background: linear-gradient(135deg, #d8c9ff, #9c6bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .LoginForm {
+    width: 340px;
+    padding: 28px;
+    border-radius: 22px;
+    background: var(--glass);
+    border: 1px solid var(--purple);
+    box-shadow:
+      0 0 15px rgba(156,107,255,0.6),
+      inset 0 0 20px rgba(156,107,255,0.1);
+    backdrop-filter: blur(14px);
+    animation: formFadeUp 0.8s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @keyframes formFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .LoginForm label {
+    font-size: 14px;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .LoginForm input {
+    width: 85%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    background: #100821;
+    border: 1px solid #7d5bff;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .LoginForm input::placeholder {
+    color: #8e7bc7;
+  }
+  
+  .LoginForm input:hover {
+    border-color: #b79bff;
+  }
+  
+  .LoginForm input:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 0 18px rgba(156,107,255,0.7);
+    transform: scale(1.02);
+  }
+  .LoginForm button {
+    width: 95%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    box-shadow: 0 0 18px rgba(156,107,255,0.7);
+    transition: all 0.35s ease;
+  }
+  
+  .LoginForm button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 30px rgba(156,107,255,1);
+  }
+  
+  .LoginForm button:active {
+    transform: scale(0.96);
+  }
+  
+  /* ===== Mobile (PHONE FIRST) ===== */
+  @media (max-width: 480px) {
+    .LoginForm {
+      width: 92%;
+      padding: 22px;
+      border-radius: 20px;
+    }
+  
+    .adminPage h1 {
+      font-size: 26px;
+    }
+  
+    .logo {
+      width: 80px;
+    }
+  }
+  
