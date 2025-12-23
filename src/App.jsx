@@ -9,6 +9,7 @@ import Login from './pages/Login/Login.jsx'
 import Profile from './pages/Profile/Profile.jsx'
 import Withraw from './pages/Withdraw/Withraw.jsx'
 import AdminLogin from './pages/AdminLogin/AdminLogin.jsx'
+import AdminPanel from './pages/AdminPanel/Adminpanel.jsx'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,6 +38,7 @@ function App() {
       <Route path='/withraw' element={<ProtectRout><LayOut ><Withraw></Withraw></LayOut></ProtectRout>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/adminlogin' element={<AdminLogin/>}></Route>
+      <Route path='/adminpanel' element={<ProtectRout><AdminPanel></AdminPanel></ProtectRout>}></Route>
     </Routes>
     <ToastContainer position="top-right" autoClose={3000} />
    </>

@@ -1,0 +1,104 @@
+:root {
+    --purple: #9c6bff;
+    --purple-dark: #6a35ff;
+    --bg-dark: #07030f;
+    --glass: rgba(25, 12, 55, 0.9);
+    --text-soft: #d6caff;
+  }
+  
+  /* PAGE */
+  body {
+    background:
+      radial-gradient(circle at top, rgba(156,107,255,0.15), transparent 40%),
+      linear-gradient(180deg, #0b051a, var(--bg-dark));
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: white;
+  }
+  
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(10, 5, 25, 0.6);
+    border-bottom: 1px solid rgba(156,107,255,0.4);
+  }
+  
+  /* NAVBAR */
+  nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* LOGO */
+  nav img {
+    width: 60px;
+    filter: drop-shadow(0 0 20px rgba(156,107,255,0.9));
+    transition: 0.3s;
+  }
+  
+  nav img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* PRICE BOX */
+  .price_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    border-radius: 14px;
+    background: var(--glass);
+    border: 1px solid var(--purple);
+    box-shadow: 0 0 15px rgba(156,107,255,0.6);
+    transition: 0.3s;
+  }
+  
+  /* PRICE TEXT */
+  .price_div p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-soft);
+  }
+  .price_div i {
+    font-size: 15px;
+    color: white;
+    padding: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    box-shadow: 0 0 12px rgba(156,107,255,0.8);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .price_div i:hover {
+    transform: scale(1.15) rotate(90deg);
+    box-shadow: 0 0 22px rgba(156,107,255,1);
+  }
+  .price_div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(156,107,255,0.9);
+  }
+  @media (max-width: 600px) {
+    nav {
+      padding: 12px 14px;
+    }
+  
+    nav img {
+      width: 50px;
+    }
+  
+    .price_div {
+      padding: 6px 10px;
+    }
+  
+    .price_div p {
+      font-size: 14px;
+    }
+  }
+  
