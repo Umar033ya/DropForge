@@ -1,0 +1,54 @@
+.rank-page {
+    min-height: 80vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .rank-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffc658;
+  }
+  
+  .chart-card {
+    background: rgba(25,12,55,0.85);
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  }
+  
+  .chart-card p {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #d6caff;
+  }
+  
+  .charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  @media (max-width: 900px) {
+    .chart-card {
+      max-width: 100%;
+    }
+  }
+  

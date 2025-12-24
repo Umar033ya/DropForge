@@ -5,8 +5,6 @@
     --glass: rgba(25, 12, 55, 0.9);
     --text-soft: #d6caff;
   }
-  
-  /* PAGE */
   body {
     background:
       radial-gradient(circle at top, rgba(156,107,255,0.15), transparent 40%),
@@ -14,8 +12,6 @@
     font-family: 'Poppins', system-ui, sans-serif;
     color: white;
   }
-  
-  /* HEADER */
   header {
     position: sticky;
     top: 0;
@@ -24,8 +20,6 @@
     background: rgba(10, 5, 25, 0.6);
     border-bottom: 1px solid rgba(156,107,255,0.4);
   }
-  
-  /* NAVBAR */
   nav {
     max-width: 1200px;
     margin: auto;
@@ -34,8 +28,6 @@
     align-items: center;
     justify-content: space-between;
   }
-  
-  /* LOGO */
   nav img {
     width: 60px;
     filter: drop-shadow(0 0 20px rgba(156,107,255,0.9));
@@ -45,8 +37,6 @@
   nav img:hover {
     transform: scale(1.05);
   }
-  
-  /* PRICE BOX */
   .price_div {
     display: flex;
     align-items: center;
@@ -58,8 +48,6 @@
     box-shadow: 0 0 15px rgba(156,107,255,0.6);
     transition: 0.3s;
   }
-  
-  /* PRICE TEXT */
   .price_div p {
     margin: 0;
     font-size: 16px;
@@ -100,5 +88,85 @@
     .price_div p {
       font-size: 14px;
     }
+  }
+  :root {
+    --purple: #9c6bff;
+    --purple-dark: #6a35ff;
+    --bg-dark: #07030f;
+    --glass: rgba(25, 12, 55, 0.9);
+    --text-soft: #d6caff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: radial-gradient(circle at top, rgba(156,107,255,0.15), transparent 40%),
+                linear-gradient(180deg, #0b051a, var(--bg-dark));
+    color: white;
+  }
+  .admin-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px; 
+    background: var(--glass);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(156,107,255,0.4);
+    backdrop-filter: blur(12px);
+    margin: 20px auto 40px auto;
+    max-width: 900px;
+  }
+  .admin-section h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .admin-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    background: rgba(0,0,0,0.3);
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 200px; 
+    max-width: 250px;
+  }
+  .admin-btn:hover {
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(156,107,255,0.6);
+  }
+  @media (max-width: 600px) {
+    .button-group {
+      flex-direction: column; 
+      gap: 15px;
+    }
+  
+    .admin-btn {
+      max-width: 100%;
+    }
+  }
+  .exit-btn {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .exit-btn:hover {
+    background-color: #ff7875;
   }
   

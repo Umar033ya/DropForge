@@ -1,0 +1,219 @@
+:root {
+    --purple: #9c6bff;
+    --purple-dark: #6a35ff;
+    --bg-dark: #07030f;
+    --glass: rgba(25, 12, 55, 0.9);
+    --text-soft: #d6caff;
+  }
+  
+  .order-page {
+    min-height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(180deg, #0b051a, var(--bg-dark));
+  }
+  
+  /* Loader */
+  .loader {
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid var(--purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Container */
+  .order-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  /* Card */
+  .order-card {
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(156,107,255,0.3);
+    backdrop-filter: blur(12px);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(156,107,255,0.6);
+  }
+  
+  .order-card h3 {
+    margin-bottom: 10px;
+    color: var(--purple);
+  }
+  
+  .order-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+  
+  /* Icons */
+  .order-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  }
+  
+  .icon.done {
+    color: #4caf50;
+  }
+  
+  .icon.problem {
+    color: #f44336;
+  }
+  
+  .icon:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 8px var(--purple);
+  }
+  @media (max-width: 600px) {
+    .order-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .order-card {
+      padding: 15px;
+    }
+  
+    .icon {
+      font-size: 1.3rem;
+    }
+  }
+  :root {
+    --purple: #9c6bff;
+    --purple-dark: #6a35ff;
+    --bg-dark: #07030f;
+    --glass: rgba(25, 12, 55, 0.9);
+    --text-soft: #d6caff;
+  }
+  
+  .order-page {
+    min-height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(180deg, #0b051a, var(--bg-dark));
+  }
+  
+  .loader {
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid var(--purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .order-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .order-card {
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(156,107,255,0.3);
+    backdrop-filter: blur(12px);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(156,107,255,0.6);
+  }
+  
+  .order-card h3 {
+    margin-bottom: 10px;
+    color: var(--purple);
+  }
+  
+  .order-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+  
+  .order-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  }
+  
+  .icon.done {
+    color: #4caf50;
+  }
+  
+  .icon.problem {
+    color: #f44336;
+  }
+  
+  .icon:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 8px var(--purple);
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 600px) {
+    .order-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .order-card {
+      padding: 15px;
+    }
+  
+    .icon {
+      font-size: 1.3rem;
+    }
+  }
+  
