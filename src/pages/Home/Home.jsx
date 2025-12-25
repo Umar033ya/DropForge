@@ -9,6 +9,10 @@ import "swiper/css/pagination";
 import case1 from '../../../public/case1.png';
 import case2 from '../../../public/case2.jpg'
 import case3 from '../../../public/case3.jpg'
+import case4 from '../../../public/case4.png'
+import case5 from '../../../public/case5.png'
+import case6 from '../../../public/case6.png'
+import case7 from '../../../public/case7.png'
 import swiper1 from '../../../public/SWIPER1.jpg'
 import swiper2 from '../../../public/swiper2.jpg'
 import swiper3 from '../../../public/swiper3.jpg'
@@ -81,22 +85,22 @@ function Home({ data }) {
   price={24}
 />
 
-<Cases caseImg={case1} caseName="Shadow Crate"
+<Cases caseImg={case4} caseName="Shadow Crate"
   skinIds={[5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 81]}
   price={22}
 />
 
-<Cases caseImg={logo} caseName="Crimson Fury"
+<Cases caseImg={case5} caseName="Crimson Fury"
   skinIds={[6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46, 50, 54, 58, 62, 66, 70, 74, 78, 82]}
   price={25}
 />
 
-<Cases caseImg={case2} caseName="Emerald Strike"
+<Cases caseImg={case6} caseName="Emerald Strike"
   skinIds={[7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 59, 63, 67, 71, 75, 79, 83]}
   price={30}
 />
 
-<Cases caseImg={case3} caseName="Golden Phantom"
+<Cases caseImg={case7} caseName="Golden Phantom"
   skinIds={[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39]}
   price={15}
 />
